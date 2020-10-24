@@ -1,0 +1,350 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: arial, Sans-Serif;
+      }
+      .main {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: oldlace;
+      }
+      .id-link {
+        text-decoration: none;
+        color: inherit;
+        border-bottom: 1.4px solid tomato;
+      }
+      
+      .input {
+        position: absolute;
+        display: none;
+      }
+      
+      .label {
+        position: absolute;
+        cursor: pointer;
+        top: 64px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 40px;
+        color: oldlace;
+        background-color: tomato;
+        border-radius: 9px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 40px;
+        transition: all 0.3s linear;
+      }
+      .label::before {
+        content: 'Open';
+        letter-spacing: 1px;
+      }
+      
+      .message {
+        position: absolute;
+        top: -180px;
+        left: 0;
+        width: 100%;
+        height: 180px;
+        padding: 20px;
+        color: snow;
+        background-color: #242424;
+        transition: top 0.3s linear;
+        overflow: hidden;
+      }
+      .message .text {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 22px;
+        letter-spacing: 1px;
+      }
+      .message .sub-text {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+      }
+      
+      .input:checked + label {
+        top: 200px;
+        background-color: #242424;
+        color: tomato;
+      }
+      .input:checked + label::before {
+        content: 'Close';
+      }
+      .input:checked ~ .message {
+        top: 0;
+      }
+      
+      
+      .bird-box {
+        position: absolute;
+        left: 0;
+        bottom: 64px;
+        width: 100%;
+        height: 412px;
+        background-color: oldlace;
+        border-bottom: 1.4px solid tomato;
+      }
+      
+      .b-hairs {
+        position: absolute;
+        top: 81px;
+        left: 208px;
+        width: 50px;
+        height: 50px;
+        border-radius: 0 100% 0 0;
+        border-top: 1.4px solid #000;
+        border-right: 1.4px solid #000;
+      }
+      .b-hairs::before {
+        position: absolute;
+        content: '';
+        top: 13px;
+        width: 34px;
+        height: 34px;
+        border-radius: 0 100% 0 0;
+        border-top: 1.4px solid #000;
+        border-right: 1.4px solid #000;
+      }
+      .b-hairs::after {
+        position: absolute;
+        content: '';
+        top: 29px;
+        width: 18px;
+        height: 18px;
+        border-radius: 0 100% 0 0;
+        border-top: 1.4px solid #000;
+        border-right: 1.4px solid #000;
+      }
+      .b-hairs .hair {
+        position: absolute;
+        top: 13px;
+        left: -44px;
+        width: 45px;
+        height: 35.5px;
+        border-top: 1.4px solid #000;
+      }
+      .b-hairs .hair:before {
+        position: absolute;
+        content: '';
+        top: -9px;
+        left: -17px;
+        width: 18px;
+        height: 18px;
+        background-color: #000;
+        border-radius: 50%;
+      }
+      
+      .b-face {
+        position: absolute;
+        top: 130px;
+        left: 133px;
+        width: 76px;
+        height: 60px;
+        background-color: #000;
+      }
+      .b-face::before {
+        position: absolute;
+        content: '';
+        left: -49px;
+        width: 50px;
+        height: 60px;
+        background-color: tomato;
+        border-radius: 100% 0 0 0;
+      }
+      .b-face::after {
+        position: absolute;
+        content: '';
+        left: 75px;
+        width: 50px;
+        height: 60px;
+        background-color: #000;
+        border-radius: 0 0 100% 0;
+      }
+      .b-face .eye {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        width: 20px;
+        height: 20px;
+        background-color: grey;
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .eye-lid{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+      }
+      .bird-box:hover .eye-lid span{
+        display: block;
+        width: 100%;
+        height: 0%;
+        background-color: #242424;
+        animation: eyelid 2s infinite;
+      }
+      
+       @keyframes eyelid{
+        
+        0%{
+          height: 0%;
+        }
+        10%{
+          height: 100%;
+        }
+        40%{
+          height: 0%;
+        }
+        100%{
+          height: 0%;
+        }
+      }
+     
+      .b-neck {
+        position: absolute;
+        top: 189px;
+        left: 111px;
+        width: 89px;
+        height: 75px;
+        border-radius: 100% 0 0 0;
+        border-left: 1.4px solid #000;
+        border-top: 1.4px solid #000;
+      }
+      .b-neck::after {
+        position: absolute;
+        content: '';
+        top: 87px;
+        width: 79px;
+        height: 75px;
+        border-radius: 0 0 100% 0;
+        border-right: 1.4px solid #000;
+        border-bottom: 1.4px solid #000;
+      }
+      
+      .b-body {
+        position: absolute;
+        top: 220px;
+        left: 155px;
+        width: 124px;
+        height: 90px;
+        background-color: #000;
+        border-radius: 0 0 100% 0;
+      }
+      .b-body::before {
+        position: absolute;
+        content: '';
+        left: -45px;
+        width: 90px;
+        height: 90px;
+        background-color: inherit;
+        border-radius: 50%;
+      }
+      
+      .b-wing {
+        position: absolute;
+        top: 250px;
+        left: 204px;
+        width: 76px;
+        height: 60px;
+        background-color: tomato;
+      }
+      .b-wing::before {
+        position: absolute;
+        content: '';
+        left: -49px;
+        width: 50px;
+        height: 60px;
+        background-color: inherit;
+        border-radius: 100% 0 0 0;
+      }
+      .b-wing::after {
+        position: absolute;
+        content: '';
+        left: 75px;
+        width: 50px;
+        height: 60px;
+        background-color: inherit;
+        border-radius: 0 0 100% 0;
+      }
+      
+      .b-leg {
+        position: absolute;
+        top: 310px;
+        left: 185px;
+        width: 16px;
+        height: 43px;
+        border-right: 1.4px solid #000;
+        border-bottom: 1.4px solid #000;
+      }
+      
+      .b-tail {
+        position: absolute;
+        top: 129.5px;
+        right: 88px;
+        width: 46px;
+        height: 46px;
+        background-color: #000;
+      }
+      .b-tail::before {
+        position: absolute;
+        content: '';
+        top: -45px;
+        width: 46px;
+        height: 46px;
+        background-color: inherit;
+        border-radius: 100% 0 0 0;
+      }
+      .b-tail::after {
+        position: absolute;
+        content: '';
+        top: 45px;
+        width: 46px;
+        height: 46px;
+        background-color: inherit;
+        border-radius: 0 0 100% 0;
+      }
+      .b-tail .tail {
+        position: absolute;
+        top: 23px;
+        width: 82px;
+        height: 68px;
+        border-radius: 0 0 100% 0;
+        border-right: 1.4px solid #000;
+        border-bottom: 1.4px solid #000;
+      }
+      .b-tail .tail::before {
+        position: absolute;
+        content: '';
+        top: -9px;
+        left: 72px;
+        width: 18px;
+        height: 18px;
+        background-color: #000;
+        border-radius: 50%;
+      }
+      
+      .footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 64px;
+        color: #000;
+        background-color: oldlace;
+        text-align: center;
+        padding-top: 20px;
+        font-weight: bold;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+      
+      
